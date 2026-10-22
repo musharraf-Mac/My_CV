@@ -1,0 +1,124 @@
+% Musharraf's CV in LaTeX
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{accent}{HTML}{1F3A5F}
+
+% Section headings
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+% Compact bullet lists
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+% \cventry{Title}{Date}{Organisation}{Location}
+\newcommand{\cventry}[4]{%
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}\vspace{1pt}}
+
+% \project{Name}{Tech stack}{Date}
+\newcommand{\project}[3]{%
+  \textbf{#1} $|$ \textit{#2} \hfill #3}
+
+\begin{document}
+
+%---------------- HEADER ----------------
+\noindent
+\begin{minipage}[c]{0.22\textwidth}
+  \centering
+  \includegraphics[width=\linewidth, height=3.2cm, keepaspectratio]{My_Web_QR.png} \\[-10pt]
+  {\scriptsize\color{gray} My Portfolio website}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+  \centering
+  {\LARGE\bfseries Mohamed Rauf Abdur Rahman Musharraf}\\[5pt]
+  +94 71 5451054 \;$|$
+  \href{mailto:musharrafcm97@outlook.com}{musharrafcm97@outlook.com} \;$|$
+  \faLinkedin \href{https://www.linkedin.com/in/abdur-rahman-musharraf-6880b6224/}{ Musharraf} \;$|$
+  \faGithub \href{https://github.com/musharraf-mac}{ Musharraf-mac} \;$|$ \\
+  \faGlobe \href{https://armusharraf.me}{ www.armusharraf.me} $|$
+  City, Sri Lanka
+\end{minipage}
+
+%---------------- SUMMARY ----------------
+\section{Summary}
+Motivated BSc IT undergraduate with hands-on experience in software development.
+Seeking an internship where I can apply my skills in [your area] and grow as an engineer.
+
+%---------------- EDUCATION ----------------
+\section{Education}
+\begin{enumerate}
+\item \cventry{BSc (Hons) in Information Technology}{2024 -- Present}{Horizon Campus}{Malabe, Sri Lanka}
+  \begin{itemize}
+    \item Current GPA: 3.256  / 4.00 (5 semesters completed)
+    \item Relevant modules: Data Structures, Databases, Web Development, Software Engineering
+  \end{itemize}
+\item \cventry{Diploma in Software Engineering}{2023 -- 2025}{Wayamba Univercity of Sri Lanka}{Kuliyapitiya, Sri Lanka}
+  \begin{itemize}
+    \item Average: 67/100
+  \end{itemize}
+
+\end{enumerate}
+
+%---------------- PROJECTS ----------------
+\section{Projects}
+\project{Project One}{Java, Spring Boot, MongoDB}{2026}
+\begin{itemize}
+  \item What you built and why, in one line.
+  \item Key feature or technical decision you made.
+  \item Result or measurable impact (users, speed, accuracy).
+\end{itemize}
+
+\vspace{4pt}
+\project{Project Two}{Flutter, Firebase}{2025}
+\begin{itemize}
+  \item What you built and why, in one line.
+  \item Key feature or technical decision you made.
+\end{itemize}
+
+%---------------- EXPERIENCE ----------------
+\section{Experience}
+\cventry{Free lancer}{2022 - present}{My Self}{City, Sri Lanka}
+\begin{itemize}
+  \item Web Development project : Developed a Tourism website for a client : www.lankantourism.lk
+  \item Other projects design invitation and prepare exam papers for schools and colleges using microsoft applications.
+\end{itemize}
+
+%---------------- SKILLS ----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0pt, label={}, itemsep=2pt]
+  \item \textbf{Languages:} Java, Python, JavaScript, SQL
+  \item \textbf{Frameworks:} Spring Boot, React, Flutter
+  \item \textbf{Databases:} MongoDB, MySQL
+  \item \textbf{Tools:} Git, GitHub, VS Code, Docker, Postman
+\end{itemize}
+
+%---------------- ACHIEVEMENTS ----------------
+\section{Achievements \& Activities}
+\begin{itemize}
+  \item Certification, competition, hackathon, or club role.
+  \item Another achievement or volunteer activity.
+\end{itemize}
+
+%---------------- REFERENCES ----------------
+\section{References}
+\begin{itemize}
+  \item Isuru sir
+\end{itemize}
+
+\end{document}
