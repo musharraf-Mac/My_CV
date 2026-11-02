@@ -1,8 +1,6 @@
-% Musharraf's CV in LaTeX
-
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -11,193 +9,160 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fontawesome5}
-\usepackage{graphicx}
 
+\definecolor{accent}{HTML}{1F3A5F}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\definecolor{accent}{HTML}{1F3A5F}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Mohamed Rauf Abdur Rahman Musharraf - Curriculum Vitae},
+  pdfauthor={Mohamed Rauf Abdur Rahman Musharraf}
+}
 
-% Section headings
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
 
-% Compact bullet lists
-\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt}
-
-% \cventry{Title}{Date}{Organisation}{Location}
 \newcommand{\cventry}[4]{%
-  \textbf{#1} \hfill #2\\
-  \textit{#3} \hfill \textit{#4}\vspace{1pt}}
-
-% \project{Name}{Tech stack}{Date}
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill \textit{#4}\par}
 \newcommand{\project}[3]{%
-  \textbf{#1} $|$ \textit{#2} \hfill #3}
+  \textbf{#1}\hfill #3\\
+  \textit{#2}\par}
+\newcommand{\tech}[1]{{\small\textbf{Technologies:} #1\par}}
+\newcommand{\projectgap}{\vspace{6pt}}
 
 \begin{document}
 
-%---------------- HEADER ----------------
-\noindent
-\begin{minipage}[c]{0.22\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth, height=3.2cm, keepaspectratio]{My_Web_QR.png} \\[-10pt]
-  {\scriptsize\color{gray} My Portfolio website}
-\end{minipage}%
-\hfill
-\begin{minipage}[c]{0.78\textwidth}
-  \centering
-  {\LARGE\bfseries Mohamed Rauf Abdur Rahman Musharraf}\\[5pt]
-  +94 77 5451054 \;$|$
-  \href{mailto:musharrafcm97@outlook.com}{musharrafcm97@outlook.com} \;$|$
-  \faLinkedin \href{https://www.linkedin.com/in/abdur-rahman-musharraf-6880b6224/}{ abdur-rahman-musharraf-6880b6224} \;\\
-  \faGithub \href{https://github.com/musharraf-mac}{ Musharraf-mac} \;$|$ 
-  \faGlobe \href{https://armusharraf.me}{ www.armusharraf.me} $|$
-  \faMapMarker* Colombo, Sri Lanka
-\end{minipage}
+\begin{center}
+  {\fontsize{19}{22}\selectfont\bfseries Mohamed Rauf Abdur Rahman Musharraf}\\[5pt]
+  Colombo, Sri Lanka\enspace\textbar\enspace
+  +94 77 5451054\enspace\textbar\enspace
+  \href{mailto:musharrafcm97@outlook.com}{musharrafcm97@outlook.com}\\[3pt]
+  \href{https://armusharraf.me}{Portfolio: armusharraf.me}\enspace\textbar\enspace
+  \href{https://github.com/musharraf-mac}{GitHub: musharraf-mac}\enspace\textbar\enspace
+  \href{https://www.linkedin.com/in/abdur-rahman-musharraf-6880b6224/}{LinkedIn}
+\end{center}
+\vspace{-7pt}
 
-%---------------- SUMMARY ----------------
-\section{Summary}
-Results-driven IT undergraduate with a strong foundation in programming, data preprocessing, and full-stack development, Skilled in Python, NumPy, and backend technologies including Spring Boot and MySQL, with hands-on experience building REST APIs and working through real-world data cleaning tasks. Eager to apply strong analytical thinking and technical problem solving skills to help drive data-informed decisions within a fast-paced software environment.
+\section{Profile}
+Information Technology undergraduate with hands-on experience in full-stack development,
+data preprocessing, and AI research projects. Builds REST APIs and web applications using
+Spring Boot, Next.js, and database technologies, with Python and NumPy experience for data
+cleaning. Has led group development projects and delivered a tourism website for a freelance client.
 
-%---------------- EDUCATION ----------------
 \section{Education}
-\begin{itemize}
-\item \cventry{BSc (Hons) in Information Technology}{2024 -- Present}{Horizon Campus}{Malabe, Sri Lanka}
-  \begin{itemize}
-    \item Current GPA: 3.256  / 4.00 (5 semesters completed)
-  \end{itemize}
-\item \cventry{Diploma in Software Engineering}{2023 -- 2025}{Wayamba Univercity of Sri Lanka}{Kuliyapitiya, Sri Lanka}
-  \begin{itemize}
-    \item Average: 67/100
-  \end{itemize}
-\item \cventry{High School (GCE(A/L))}{2018 -- 2021}{BT/BC/Al-Hira Maha Vidyalaya}{Kattankudy. Sri Lanka}
-  \begin{itemize}
-    \item GCE(A/L) Stream - Physical Science
-  \end{itemize}
+\cventry{BSc (Hons) in Information Technology}{2024 -- Present}{Horizon Campus}{Malabe, Sri Lanka}
+Current GPA: 3.256/4.00\enspace\textbar\enspace Five semesters completed\par
+\vspace{4pt}
+\cventry{Diploma in Software Engineering}{2023 -- 2025}{Wayamba University of Sri Lanka}{Kuliyapitiya, Sri Lanka}
+Average: 67/100\par
+\vspace{4pt}
+\cventry{GCE Advanced Level -- Physical Science}{2018 -- 2021}{BT/BC/Al-Hira Maha Vidyalaya}{Kattankudy, Sri Lanka}
 
-\end{itemize}
-%---------------- PROJECTS ----------------
-\section{Projects}
-
-\begin{enumerate}
-  % Project - 1
-  \item \project{Lankan Tourism Website}{Website}{2026}
-   \begin{itemize}
-    \item Built a website for a tourism agency named as Lankan tourism
-    \item In here you can view their services and can see the review of the past customers and can add your review if you were one of the customers
-    \item And the services and whatsapp button will redirect you to their official whatsapp number
-    \item \textbf{Applied Technologies}: NextJS, Typescript, Tailwindcss, Firestore, GCP
-    \item \faLink \href{https://lankantourism.lk}{ www.lankantourism.lk}
-   \end{itemize}
-
-  % Project - 2
-  \item \project{Multimodal Explainable AI for Tuberculosis Diagnosis}{AI research Tool - Pair work}{2026}
-   \begin{itemize}
-    \item A research in TB diagnosis using AI
-    \item We build this tool for research purpose using densnet CNN model and used gradcam for explanation
-    \item And built an NLP model for get clinical input such as cough and used SHAP to explain
-    \item \textbf{Applied Technologies}: Python, Pytorch, Deep learning, Densnet, Jupyter notebook, Pandas, SHAP, GradCam, NLP
-    \item \faGithub \href{https://github.com/musharraf-Mac/Detective-XAI-For-TB}{ musharraf-Mac/Detective-XAI-For-TB}
-    \item \faLink \href{https://detective-xai-for-tb.streamlit.app}{ https://detective-xai-for-tb.streamlit.app}
-   \end{itemize}
-
-   % Project - 3
-  \item \project{Health System}{Microservice Web system - Group project}{2026}
-   \begin{itemize}
-    \item Health web system used for book doctor and treat a patient and update it to the patient profile. Also, public can calculate their BMI and if user logged in it will save it inside history also lab report will be analyzed by AI and give a brief to the user
-    \item \textbf{Applied Technologies}: NextJs, Tailwindcss, Typescript, Springboot, mongoDB, JWT,Redis, Docker
-    \item \textbf{Deployed in:}
-      \begin{itemize}
-        \item \textbf{Front-end:} netlify
-        \item \textbf{Back-end:} GCP - Cloud run
-        \item \textbf{DataBase:} MongoDB Atlas
-      \end{itemize}
-    \item My role: Leader \& Full Stack developer
-    \item \faGithub \href{https://github.com/musharraf-Mac/SOC-AI-Health-Web-System}{ musharraf-Mac/SOC-AI-Health-Web-System}
-    \item \faLink \href{https://health-web-system.netlify.app/}{https://health-web-system.netlify.app/}
-   \end{itemize}
-
-   % Project - 4
-  \item \project{Pulse Health Tracker}{Android application - Group project}{2026}
-   \begin{itemize}
-    \item User can track their health conditions and daily reminder for if any daily medication needs for his health
-    \item \textbf{Applied Technologies}: Android Studio, Kotlin, XML, Figma for design
-    \item My role: Lead, Design \& develop
-    \item \faGithub \href{https://github.com/MyHorizonTeam/Pulse-HealthTracker}{ MyHorizonTeam/Pulse-HealthTracker}
-   \end{itemize}
-
-   % Project - 5
-  \item \project{Movie ticket booking application}{Desktop App}{2024}
-   \begin{itemize}
-    \item You can use it for book movie ticket
-    \item Especially we build this Application using OOP principles 
-    \item \textbf{Applied Technologies}: C\#, .Net, Visual studio 
-    \item \faGithub \href{https://github.com/musharraf-Mac/Cinema_booking_System_OOP}{ musharraf-Mac/Cinema\_booking\_System\_OOP}
-   \end{itemize}
-
-   % Project - 7
-   \item \project{Personal portfolio}{Website}{2026}
-   \begin{itemize}
-    \item My personal portfolio website for show my self, my skills, education and projects.
-    \item \textbf{Applied Technologies}: ReactJS, Javascript, AI Chatbot, ThreeJS, Tailwindcss
-    \item \faLink \href{https://armusharraf.me/}{ armusharraf.me}
-   \end{itemize} 
-  
-\end{enumerate}
-\begin{itemize}
-  \item \textbf{Check my website \& Github for more projects}
-\end{itemize}
-
-%---------------- EXPERIENCE ----------------
-\section{Experience}
-\cventry{Free lancer}{2022 - present}{My Self}{City, Sri Lanka}
-\begin{itemize}
-  \item Web Development project : Developed a Tourism website for a client : www.lankantourism.lk
-  \item Other projects - Prepares documents such as books \& exam papers using microsoft applications
-\end{itemize}
-
-%---------------- SKILLS ----------------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=2pt, label={}, itemsep=2pt]
-  \item \textbf{Front-End:} ReactJS, Typescript, JavaScript, CSS, TailwindCSS, HTML, NextJS
-  \item \textbf{Back-End:} Spring-boot, Laravel, ExpressJS, PHP,
-  \item \textbf{Databases:} MongoDB, MySQL, PostgreSQL
-  \item \textbf{DeVop tools:} Git, GitHub, Docker, Kubernetes, CI/CD
-  \item \textbf{Deployment:} GCP, Azure, Vercel, Render, Infinitefree, Supabase, Cloudinary
-  \item \textbf{Mobile app Development:} Kotlin, Java, XML, Android Studio
-  \item \textbf{Machine Learning / AI:} Pytorch, Python, Langchain, Agentic AI, Scikit-learn
-  \item \textbf{Programming Languages:} c\#(.net), Java, C, Python
+\begin{itemize}[label={},leftmargin=0pt,itemsep=1pt]
+  \item \textbf{Languages:} Python, Java, C\#, C, JavaScript, TypeScript, PHP, Kotlin
+  \item \textbf{Front-End:} React, Next.js, HTML, CSS, Tailwind CSS, Three.js
+  \item \textbf{Back-End:} Spring Boot, Laravel, Express.js, .NET, REST APIs, JWT
+  \item \textbf{Databases \& Caching:} MongoDB, MySQL, PostgreSQL, Firestore, Redis
+  \item \textbf{Machine Learning \& AI:} PyTorch, scikit-learn, LangChain, Agentic AI, NLP, NumPy, pandas
+  \item \textbf{DevOps:} Git, GitHub, Docker, Kubernetes, CI/CD
+  \item \textbf{Cloud \& Deployment:} GCP (Cloud Run), Azure, Netlify, Vercel, Render, InfinityFree,
+    Supabase, Cloudinary, MongoDB Atlas
+  \item \textbf{Mobile \& Development Tools:} Android Studio, XML, Visual Studio, Jupyter Notebook, Figma
 \end{itemize}
 
-%---------------- ACHIEVEMENTS ----------------
-\section{Achievements \& Activities}
+\section{Experience}
+\cventry{Freelancer}{2022 -- Present}{Self-employed}{Sri Lanka}
 \begin{itemize}
-  \item Members of Clubs
-  \begin{itemize}
-  \item Leo Club of Horizon campus
-  \item Chess club of Horizon Campus
-  \item E- sport club Horizon campus
-  \item Community of Cyber Security horizon Campus
-  \end{itemize}
-  \item Executive board member of Student council \& Sports council
-  \item Participated chess tournaments in Campus
-  \item Participated in marathon organized by Management faculty in horizon campus
+  \item Developed the Lankan Tourism website for a client, presenting agency services, customer reviews,
+    and WhatsApp contact options.
+  \item Prepare and format books, examination papers, and other documents using Microsoft applications.
 \end{itemize}
 
-% -------------------------Langugages-----------------------------
-\section{Languages}
- \begin{itemize}
-  \item Tamil (native)
-  \item English (Intermidiate)
-  \item Sinhala (Very basic)
- \end{itemize}
+\section{Projects}
+\project{Multimodal Explainable AI for Tuberculosis Diagnosis}{AI research tool\enspace\textbar\enspace Two-person project}{2026}
+\begin{itemize}
+  \item Co-developed a research tool for tuberculosis diagnosis using a DenseNet convolutional neural
+    network (CNN), with Grad-CAM to explain model predictions.
+  \item Built an NLP model to process clinical inputs such as cough symptoms, using SHAP to explain its outputs.
+\end{itemize}
+\tech{Python, PyTorch, deep learning, DenseNet, pandas, Jupyter Notebook, NLP, SHAP, Grad-CAM}
+{\small\href{https://github.com/musharraf-Mac/Detective-XAI-For-TB}{GitHub: Detective-XAI-For-TB}
+\enspace\textbar\enspace\href{https://detective-xai-for-tb.streamlit.app}{Live demo: detective-xai-for-tb.streamlit.app}\par}
 
-\section{Certifications}
- \begin{itemize}
-  \item Python for Beginners by University of Moratuwa
-  \item AI/ML Engineer By SLIIT
-  \item Intro to programming -- Kaggle
-  \item Try hack me profile: https://tryhackme.com/p/Musharrafcm97
- \end{itemize}
+\projectgap
+\project{Lankan Tourism Website}{Client website}{2026}
+\begin{itemize}
+  \item Built a tourism agency website showcasing services and allowing customers to view and submit reviews.
+  \item Connected service links and contact buttons to the agency's official WhatsApp number.
+\end{itemize}
+\tech{Next.js, TypeScript, Tailwind CSS, Firestore, GCP}
+{\small\href{https://lankantourism.lk}{Website: lankantourism.lk}\par}
+
+\newpage
+
+\section{Projects (continued)}
+\project{Health System}{Microservices web application\enspace\textbar\enspace Group project\enspace\textbar\enspace Team Lead \& Full-Stack Developer}{2026}
+\begin{itemize}
+  \item Led the team and contributed to full-stack development of a health platform for doctor bookings,
+    patient treatment updates, and patient profiles.
+  \item The platform includes a public BMI calculator, BMI history for logged-in users, and AI-generated
+    summaries of laboratory reports.
+  \item Deployed the front end on Netlify, back-end services on GCP Cloud Run, and the database on MongoDB Atlas.
+\end{itemize}
+\tech{Next.js, TypeScript, Tailwind CSS, Spring Boot, MongoDB, JWT, Redis, Docker}
+{\small\href{https://github.com/musharraf-Mac/SOC-AI-Health-Web-System}{GitHub: SOC-AI-Health-Web-System}
+\enspace\textbar\enspace\href{https://health-web-system.netlify.app/}{Live demo: health-web-system.netlify.app}\par}
+
+\projectgap
+\project{Pulse Health Tracker}{Android application\enspace\textbar\enspace Group project\enspace\textbar\enspace Team Lead, Designer \& Developer}{2026}
+\begin{itemize}
+  \item Led, designed, and contributed to development of an Android app for tracking health conditions
+    and setting daily medication reminders.
+\end{itemize}
+\tech{Kotlin, XML, Android Studio, Figma}
+{\small\href{https://github.com/MyHorizonTeam/Pulse-HealthTracker}{GitHub: MyHorizonTeam/Pulse-HealthTracker}\par}
+
+\projectgap
+\project{Personal Portfolio}{Website}{2026}
+\begin{itemize}
+  \item Built a personal website presenting skills, education, and projects, with an AI chatbot.
+\end{itemize}
+\tech{React, JavaScript, Three.js, Tailwind CSS, AI chatbot}
+{\small\href{https://armusharraf.me/}{Website: armusharraf.me}\par}
+
+\projectgap
+\project{Movie Ticket Booking Application}{Desktop application}{2024}
+\begin{itemize}
+  \item Developed a desktop application for booking movie tickets using object-oriented programming (OOP) principles.
+\end{itemize}
+\tech{C\#, .NET, Visual Studio}
+{\small\href{https://github.com/musharraf-Mac/Cinema_booking_System_OOP}{GitHub: Cinema\_booking\_System\_OOP}\par}
+\vspace{5pt}
+{\small Additional projects are available on my
+\href{https://armusharraf.me/}{portfolio} and \href{https://github.com/musharraf-mac}{GitHub}.\par}
+
+\section{Certifications \& Learning}
+\begin{itemize}
+  \item \textbf{Python for Beginners} -- University of Moratuwa
+  \item \textbf{AI/ML Engineer} -- SLIIT
+  \item \textbf{Intro to Programming} -- Kaggle
+  \item \textbf{TryHackMe profile:} \href{https://tryhackme.com/p/Musharrafcm97}{tryhackme.com/p/Musharrafcm97}
+\end{itemize}
+
+\section{Leadership \& Activities}
+\begin{itemize}
+  \item Executive board member of the Student Council and Sports Council.
+  \item Member of the Leo Club, Chess Club, E-sports Club, and Cyber Security Community at Horizon Campus.
+  \item Participated in campus chess tournaments and a marathon organized by the Management Faculty at Horizon Campus.
+\end{itemize}
+
+\section{Languages}
+Tamil (Native)\enspace\textbar\enspace English (Intermediate)\enspace\textbar\enspace Sinhala (Very basic)
 
 \end{document}
